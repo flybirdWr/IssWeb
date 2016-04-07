@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="entity.User" table="user">
+        <id name="uid" length="30">
+            <generator class="increment"/>
+        </id>
+        <property name="username" length="100" unique="true"/>
+        <property name="password" length="30"/>
+        <property name="email" length="30" unique="true"/>
+        <property name="phone" length="30"/>
+        <property name="status" length="2"/>
+        <property name="head" length="30"/>
+        <property name="Activated" />
+        <property name="signature" length="255"/>
+
+
+
+    </class>
+
+    <class name="entity.article" table="article">
+        <id name="article_id" length="20">
+            <generator class="increment"/>
+        </id>
+        <property name="title" length="20"/>
+        <property name="date" length="20"/>
+        <many-to-one name="u" column="author" lazy="false" unique="false" cascade="all" />
+        <property name="text"/>
+        <many-to-one class="entity.article" name="parentArticle" column="parent_article" cascade="all"/>
+        <property name="tree_level" length="10"/>
+
+
+    </class>
+
+    <class name="entity.UserComplaint" table="UserComplaint">
+        <composite-id>
+            <key-many-to-one class="entity.article" name="a" column="article_id"  />
+
+            <key-many-to-one class="entity.User" name="u" column="uid"/>
+        </composite-id>
+        <property name="ctext"/>
+        <property name="ctime" length="20"/>
+    </class>
+
+
+    <class name="entity.Tag" table="Tag">
+        <id name="tag_id" length="20">
+            <generator class="increment"/>
+        </id>
+        <property name="tag_name" length="20"/>
+        <many-to-one class="entity.Tag" name="parentTag" column="parent_tag_id" cascade="all"/>
+    </class>
+
+
+    <class name="entity.UserFavoriteTag" table="UserFavoriteTag">
+        <composite-id>
+            <key-many-to-one class="entity.Tag" name="t" column="tag_id"/>
+            <key-many-to-one class="entity.User" name="u" column="uid"/>
+        </composite-id>
+    </class>
+
+
+
+    <class name="entity.UserFavoriteArticle" table="UserFavoriteArticle">
+        <composite-id>
+            <key-many-to-one class="entity.article" name="a" column="article_id" lazy="false" />
+            <key-many-to-one class="entity.User" name="u" column="uid" lazy="false"/>
+
+        </composite-id>
+        <property name="start_date" length="20"/>
+        <property name="due_time" length="20"/>
+        <property name="IsChecked"/>
+    </class>
+
+
+    <class name="entity.articleTag" table="articleTag">
+        <composite-id>
+            <key-many-to-one class="entity.article" name="a" column="article_id" lazy="false"/>
+            <key-many-to-one class="entity.Tag" name="t" column="tag_id" lazy="false"/>
+        </composite-id>
+    </class>
+
+
+    <class name="entity.articleJudgement" table="articleJudgement">
+        <composite-id>
+            <key-many-to-one class="entity.article" name="a" column="article_id" />
+            <key-many-to-one class="entity.User" name="u" column="uid"/>
+        </composite-id>
+        <property name="thumb_or_step" length="20" />
+    </class>
+
+    <class name="entity.message" table="message">
+        <composite-id>
+            <key-many-to-one class="entity.article" name="a" column="article_id" lazy="false"/>
+            <key-many-to-one class="entity.User" name="u1" column="relative" lazy="false"/>
+            <key-many-to-one class="entity.User" name="sender" column="sender" lazy="false"/>
+        </composite-id>
+        <property name="d" column="date"/>
+        <property name="IsChecked" />
+    </class>
+
+
+</hibernate-mapping>

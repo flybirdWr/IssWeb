@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, STHeiti, "Microsoft Yahei", sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+.badge {
+    background-color: #DC4752;
+}
+.navbar{
+    border-radius: 0;
+    font-size:1.3em;
+
+}
+.navbar-inverse {
+    background-color: #3E3C3C;
+    border-color: #3C3B3B;
+}
+.header-search {
+    position: relative;
+    margin: 10px 0 0 20px;
+    width: 200px;
+}
+.header-search .btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    color: #7D938A;
+}
+.header-search .form-control {
+    padding-right: 35px;
+    border-color: transparent;
+    height: 34px;
+    background: #F1EEEE;
+    color: #fff;
+}
+.container-fluid{
+    padding:0;
+}
+.container-fluid>.message{
+    position: relative;
+    width:100%;
+    height:270px;
+    margin-top:50px;
+    background: url(../images/personal-bg.png);
+    background-size: 110% 100%;
+    box-shadow: 0px 2px 5px 3px #5295A7;
+}
+.message>.nav-child{
+    width:100%;
+    height:50px;
+    background: rgba(0,180,228,0.6);
+    position: absolute;
+    bottom:0;
+}
+/*��ʾ������Ϣ*/
+.message>.personal-message{
+    float:left;
+   margin:3% 0 0 13%;
+}
+.message>.personal-message>.box-img{
+    float:left;
+    display: inline-block;
+    /* max-width: 100%; */
+    height: auto;
+    /* padding: 4px; */
+    line-height: 1.42857143;
+    border-radius: 4px;
+    padding: 5px;
+    border: 2px solid #7E8282;
+    box-shadow: 0 0 10px 2px #A3A5A7;
+    background: #D0E4FC;
+}
+.message>.personal-message>.jianjie{
+    float:left;
+    margin-left:15px;
+}
+.message>.personal-message>.jianjie>P{
+    font-size:1.2em;
+    margin: 10px 0 0 10px;
+}
+/*��ʾ������*/
+.grow{
+    width:330px;
+    height:30px;
+}
+
+.progress {
+    float:left;
+    height: 15px;
+    width: 250px;
+    margin-bottom: 1px;
+    overflow: hidden;
+    background-color: #CCD1D6;
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.4);
+}
+.progress-bar-warning {
+    background-color: #E2AF1E;
+}
+.progress-bar {
+    height: 13px;
+    margin-top: 2px;
+}
+.gexingqian{
+    float:left;
+}
+
+.nav-child ul{
+    width:550px;
+    height:100%;
+}
+.nav-child ul>li{
+    width:20%;
+    float:left;
+    list-style: none;
+    text-align: center;
+    padding:5px;
+}
+.nav-child ul>li>a{
+    text-decoration: none;
+    font-size: 1.4em;
+    line-height: 200%;
+    color:#00356F;
+}
+.nav-child ul>.active{
+    background: #0073C1;
+    box-shadow: 0px 3px 2px 1px #486B75;
+}
+.nav-child ul>.active>a{
+    color: #D6D2D2;
+}
+
+.quesions{
+    width:100%;
+    margin-top:30px;
+    background:#FDFBFB;
+    border-radius: 1px;
+    box-shadow: 0 0 5px 5px #dde;
+    float: left;
+}
+/*@media (min-width: 1200px) {
+    .container-fluid .container {
+        width: 1070px;
+    }
+}*/
+
+/*��ʾ�ҵ�����*/
+.quesions {
+    width: 100%;
+    margin-top: 30px;
+    background: #FDFBFB;
+    border-radius: 1px;
+    box-shadow: 0 0 5px 5px #dde;
+    float: left;
+    padding: 20px;
+    min-height: 600px;
+    margin-bottom: 100px;
+}
+.question {
+    margin-top: 30px;
+    float: left;
+    border-bottom: 1px solid #ccc5c5;
+    padding-bottom: 30px;
+}
+.title {
+    display: inline;
+    margin: 0 5px 0 0;
+    font-size: 20px;
+}
+.title a {
+    color: #333;
+}
+.title>a {
+    font-size: 1em;
+}
+.content {
+    color: #555;
+    margin-top: 5px;
+    text-indent: 2em;
+    font-size: 1.1em;
+}
+.author a {
+    color: #999;
+}
+.label {
+    display: inline;
+    padding: .3em .6em .3em;
+    font-size: 75%;
+    line-height: 2.5;
+    /* color: #079407; */
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    font-weight: 400;
+}
+.label-success {
+    background: #48C5E6;
+}
+.manipulate{
+    width:100%;
+    height:50px;
+    margin-top:10px;
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+}
+.manipulate>ul{
+    width:100%;
+}
+.manipulate>ul>li{
+    width:24%;
+    float:left;
+    text-align: center;
+    margin-top:10px;
+    list-style: none;
+    border-right: 1px solid #E4E4E4 ;
+}
+.manipulate>ul>li>a{
+    font-size: 1.4em;
+    color: #989696;
+    text-decoration: none;
+}
+.manipulate>ul>.xian{
+    border-right: 0;
+}
+
+
+/*���ô���nav*/
+
+
+.quesions>.nav-tabs>li {
+  float: left;
+  margin-bottom: -1px;
+}
+.quesions>.nav>li {
+position: relative;
+display: block;
+}
+.quesions>.nav-tabs-zen>li.active>a {
+color: #333;
+}
+.quesions>.nav-tabs>li.active>a,.quesions>.nav-tabs>li.active>a:hover,.quesions>.nav-tabs>li.active>a:focus {
+color: #555;
+background-color: #fff;
+border: 1px solid #ddd;
+border-bottom-color: transparent;
+cursor: default;
+}
+.nav-tabs-zen>li>a {
+    margin-right: -1px;
+    padding: 7px 15px;
+    border: 1px solid #CACACA;
+    min-width: 100px;
+    background-color: #EAEAEA;
+    text-align: center;
+    color: #444;
+    font-weight: bold;
+    font-size: 14px;
+    border-radius: 0;
+}
+.quesions>.nav>li>a {
+position: relative;
+display: block;
+padding: 10px 15px;
+}
+
+/*�ҵ������޸�*/
+.touxiang{
+    width: 200px;
+    margin: 50px auto auto 20px;
+}
+.xinxi{
+    margin:50px auto auto -10px;
+}
+
+/*���ۻظ�*/
+.comment{
+    margin: 10px 0 35px;
+    background: #fff;
+    /*max-width: 540px;*/
+    padding: 2px 20px;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+.chil-touxiang{
+    float:left;
+    margin-right: 5px;
+}
+.comment p{
+    margin:0;
+}
+strong{
+    color: #9C8D0A;
+}
+.pinglun{
+    margin-top:10px;
+}
+.huifu{
+    margin-top: 7px;
+    margin-left: 40px;
+}
+.icon-spike {
+    position: absolute;
+    top: -8px;
+    left: 23px;
+    width: 13px;
+    height: 8px;
+    background-position: -200px -165px;
+}
+.zm-comment-box .zm-comment-bubble {
+    position: absolute;
+    top: -8px;
+    left: 81px;
+    display: none;
+}
+.icon{
+    width: 16px;
+    height: 16px;
+    background-image: url(../images/sprites-1.9.2.4c54885a.png);
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/*与我相关页面*/
+.about-box {
+    margin: 2px 0 10px 0;
+    border: 1px solid #DCDBDB;
+    padding: 15px 15px 10px 15px;
+    border-radius: 1px;
+    background-color: #E4E2E2;
+}

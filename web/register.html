@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登陆入口</title>
+    <!--支持响应式-->
+    <meta name="viewport" content="width=device-width initial-scale=1">
+
+    <LINK rel=stylesheet href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+<body>
+<div class="bg"></div>
+<div class="content">
+    <!--导航栏-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo.png" height="40" style="margin-top:-10px;margin-left:-10px;">
+                </a>
+            </div>
+
+        </div><!-- /.container-fluid -->
+    </nav>
+    <div id="login">
+        <ul>
+            <li>
+                <a href="login.jsp">登录</a>
+            </li>
+            <li class="active">
+                <a href="#">注册</a>
+            </li>
+        </ul>
+
+        <form name="RegisterAction" class="form-horizontal" role="form" action="/user/RegisterServlet" onsubmit="" method="post">
+
+            <div class="form-group">
+                <label class="sr-only control-label">
+                    账号
+                </label>
+                <div>
+                    <input type="text" name="username" id="usernameid" class="form-control" placeholder="昵称由字母数字或下划线组成" >
+                </div>
+            <span id="name-ck" class="help-block">
+            </span>
+            </div>
+            <div class="form-group">
+                <label class="sr-only control-label">
+                    密码
+                </label>
+                <div class=" ">
+                    <input type="password" name="password" id="passwordid" class="form-control" placeholder="输入密码">
+                </div>
+            <span id="password-ck" class="help-block">
+
+            </span>
+            </div>
+
+            <div class="form-group">
+                <label class="sr-only control-label">
+                    密码
+                </label>
+                <div class=" ">
+                    <input type="password" name="password" id="conformpassword" class="form-control" placeholder="再次输入密码">
+                </div>
+            <span id="conformpassword-ck" class="help-block">
+
+            </span>
+            </div>
+            <!--<div class="form-group">-->
+                <!--<label class="sr-only control-label" for="emailid">-->
+                    <!--邮箱-->
+                <!--</label>-->
+                <!--<div style="width:100%;float:left">-->
+                    <!--<input type="email" name="email" id="emailid" class="form-control" placeholder="输入常用邮箱">-->
+                <!--</div>-->
+            <!--<span id="email-ck" class="help-block">-->
+
+            <!--</span>-->
+            <!--</div>-->
+            <div class="form-group">
+                <div style="float:left">
+                    <div class="checkbox">
+                        <label>
+                            <input name="agree" type="checkbox" id="agreeid" value="passerby"/>
+                            <span>同意并接受<a href="" style="margin-left:0px;">《网站协议》</a></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" value="flag" name="flag">
+            <br>
+            <div class="form-group">
+                <div class="">
+                    <button type="submit" id="registerBtn" class="btn btn-info" style="font-size:1.4em; width:100%;font-weight:600;" disabled="disabled">
+                        注册
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/register.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+.current-question{
+    float: left;
+    background: #F9F7F7;
+    margin-top:50px;
+    margin-bottom: 50px;
+    padding: 30px 0 30px 20px;
+}
+
+.question-content{
+    padding:25px 10px;
+    text-indent: 2em;
+}
+.user-answers{
+    background: #F9F7F7;
+    margin-top:50px;
+    margin-bottom: 50px;
+    padding: 30px 20px;
+}
+.answer-comment{
+    display: none;
+}
+.comment-items{
+    padding:25px 10px;
+}
+hr{
+    border-top: 1px solid #CAC5C5;
+}
